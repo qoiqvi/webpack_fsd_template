@@ -7,6 +7,10 @@
         "target": "es5",
         "jsx": "react-jsx",
         "allowJs": true,
+<<<<<<< HEAD
+=======
+        // "baseUrl": "./src",
+>>>>>>> c452aa4041529bc068c8e08280034e27a9f96a69
         "baseUrl": ".",
         "paths": {
             // "@app/*": [
@@ -30,6 +34,7 @@
             "*": [
                 "./src/*"
             ]
+<<<<<<< HEAD
             // "@pages/*": [
             //     "src/pages/*"
             // ],
@@ -48,6 +53,8 @@
             // "@widgets/*": [
             //     "src/widgets/*"
             // ]
+=======
+>>>>>>> c452aa4041529bc068c8e08280034e27a9f96a69
         },
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
