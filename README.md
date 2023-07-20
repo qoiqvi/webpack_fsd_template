@@ -1,5 +1,4 @@
 ## webpack_fsd_template
-# react_ts_webpack
 
 Этот репозиторий представляет собой собранный с помощью webpack'a проект, со всеми подключеными лоадерами:
 - ts loader
@@ -12,6 +11,7 @@
 # Стек технологий
 - webpack 5v, webpack-dev-server
 - TypeScript
+- React
 - SCSS
 - EsLint, StyleLint (правила не заданы)
 - FSD
