@@ -1,4 +1,5 @@
-# webpack_fsd_template
+## webpack_fsd_template
+# react_ts_webpack
 
 Этот репозиторий представляет собой собранный с помощью webpack'a проект, со всеми подключеными лоадерами:
 - ts loader
