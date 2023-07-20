@@ -1,3 +1,4 @@
+![logo](https://miro.medium.com/v2/resize:fit:800/1*x6EnTlBhjcyu605VPDysZQ.jpeg)
 ## webpack_fsd_template
 
 Этот репозиторий представляет собой собранный с помощью webpack'a проект, со всеми подключеными лоадерами:
@@ -18,9 +19,9 @@
 
 ## Как использовать
 
+```bash
 1. Клонируйте репозиторий:
 
-```bash
 git clone https://github.com/qoiqvi/webpack_fsd_template
 
 2. Перейдите в директорию проекта
