@@ -7,12 +7,6 @@ export function buildResolvers (options: BuildOptions): ResolveOptions {
     preferAbsolute: true,
     modules: [options.paths.src, 'node_modules'],
     mainFiles: ['index'],
-<<<<<<< HEAD
-=======
-    // alias: {
-    //   '@': options.paths.src
-    // }
->>>>>>> c452aa4041529bc068c8e08280034e27a9f96a69
     alias: {}
   }
 }

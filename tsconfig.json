@@ -7,54 +7,11 @@
         "target": "es5",
         "jsx": "react-jsx",
         "allowJs": true,
-<<<<<<< HEAD
-=======
-        // "baseUrl": "./src",
->>>>>>> c452aa4041529bc068c8e08280034e27a9f96a69
         "baseUrl": ".",
         "paths": {
-            // "@app/*": [
-            //     "app/*"
-            // ],
-            // "@pages/*": [
-            //     "pages/*"
-            // ],
-            // "@widgets/*": [
-            //     "widgets/*"
-            // ],
-            // "@features/*": [
-            //     "featuress/*"
-            // ],
-            // "@entities/*": [
-            //     "entities/*"
-            // ],
-            // "@shared/*": [
-            //     "shared/*"
-            // ],
             "*": [
                 "./src/*"
             ]
-<<<<<<< HEAD
-            // "@pages/*": [
-            //     "src/pages/*"
-            // ],
-            // "@shared/*": [
-            //     "src/shared/*"
-            // ],
-            // "@features/*": [
-            //     "src/features/*"
-            // ],
-            // "@app/*": [
-            //     "src/app/*"
-            // ],
-            // "@entities/*": [
-            //     "src/entities/*"
-            // ],
-            // "@widgets/*": [
-            //     "src/widgets/*"
-            // ]
-=======
->>>>>>> c452aa4041529bc068c8e08280034e27a9f96a69
         },
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
