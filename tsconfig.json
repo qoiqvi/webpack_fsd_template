@@ -7,26 +7,47 @@
         "target": "es5",
         "jsx": "react-jsx",
         "allowJs": true,
-        "baseUrl": "./src",
+        "baseUrl": ".",
         "paths": {
-            "@app/*": [
-                "app/*"
-            ],
-            "@pages/*": [
-                "pages/*"
-            ],
-            "@widgets/*": [
-                "widgets/*"
-            ],
-            "@features/*": [
-                "featuress/*"
-            ],
-            "@entities/*": [
-                "entities/*"
-            ],
-            "@shared/*": [
-                "shared/*"
-            ],
+            // "@app/*": [
+            //     "app/*"
+            // ],
+            // "@pages/*": [
+            //     "pages/*"
+            // ],
+            // "@widgets/*": [
+            //     "widgets/*"
+            // ],
+            // "@features/*": [
+            //     "featuress/*"
+            // ],
+            // "@entities/*": [
+            //     "entities/*"
+            // ],
+            // "@shared/*": [
+            //     "shared/*"
+            // ],
+            "*": [
+                "./src/*"
+            ]
+            // "@pages/*": [
+            //     "src/pages/*"
+            // ],
+            // "@shared/*": [
+            //     "src/shared/*"
+            // ],
+            // "@features/*": [
+            //     "src/features/*"
+            // ],
+            // "@app/*": [
+            //     "src/app/*"
+            // ],
+            // "@entities/*": [
+            //     "src/entities/*"
+            // ],
+            // "@widgets/*": [
+            //     "src/widgets/*"
+            // ]
         },
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
