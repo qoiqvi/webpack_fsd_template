@@ -7,27 +7,8 @@
         "target": "es5",
         "jsx": "react-jsx",
         "allowJs": true,
-        // "baseUrl": "./src",
         "baseUrl": ".",
         "paths": {
-            // "@app/*": [
-            //     "app/*"
-            // ],
-            // "@pages/*": [
-            //     "pages/*"
-            // ],
-            // "@widgets/*": [
-            //     "widgets/*"
-            // ],
-            // "@features/*": [
-            //     "featuress/*"
-            // ],
-            // "@entities/*": [
-            //     "entities/*"
-            // ],
-            // "@shared/*": [
-            //     "shared/*"
-            // ],
             "*": [
                 "./src/*"
             ]
