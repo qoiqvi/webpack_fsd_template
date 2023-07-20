@@ -4,6 +4,8 @@ module.exports = {
         "es2021": true
     },
     "extends": [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
         "plugin:react/recommended",
         "standard-with-typescript",
         "plugin:react/recommended",
@@ -24,7 +26,8 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "react-hooks"
+        "react-hooks",
+        '@typescript-eslint'
     ],
     "rules": {
         'react/jsx-filename-extension': [2, {
