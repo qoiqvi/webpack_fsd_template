@@ -4,4 +4,8 @@ import "./app/styles/index.scss"
 
 const container = document.getElementById("root")
 const root = createRoot(container as HTMLElement)
-root.render(<App />)
+root.render(
+	<BrowserRouter>
+		<App />
+	</BrowserRouter>
+)

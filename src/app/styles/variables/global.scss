@@ -1,17 +1,19 @@
 :root {
 	// typography
-	--font-family-wide: MTS Wide, "Times New Roman";
-	--font-family-compact: MTS Compact, "Times New Roman";
-	--font-family-title: MTS Text, "Times New Roman";
+
+	--font-family-main: ubuntu, "Times New Roman";
+	--font-family-title: "Bebas Neue", sans-serif;
+	--font-family-compact: "MTS Compact", ubuntu;
 	--font-size-m: 20px;
 	--font-line-m: 28px;
 	--font-size-l: 22px;
 	--font-line-l: 30px;
 	--font-size-xl: 26px;
 	--font-line-xl: 34px;
-	--font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-compact);
-	--font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-text);
-	--font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-wide);
+	--font-main: var(--font-size-m) / var(--font-line-m) var(--font-family-compact);
+	--font-large: var(--font-size-l) / var(--font-line-l) var(--font-family-text);
+	--font-xlarge: var(--font-size-xl) / var(--font-line-xl) var(--font-family-wide);
+	font: var(--font-xl);
 
 	// размеры
 	--navbar-height: 60px;

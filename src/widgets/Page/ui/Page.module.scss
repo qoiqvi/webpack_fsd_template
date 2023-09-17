@@ -1,0 +1,16 @@
+.PageWrapper {
+	flex-grow: 1;
+	padding: 20px;
+	height: calc(100vh - var(--navbar-height));
+	padding-left: 40px;
+	overflow-y: auto;
+	flex-shrink: 100;
+	// max-width: 1200px;
+	margin: 0 auto;
+}
+
+.trigger {
+	height: 40px;
+	width: 100%;
+	padding: 10px;
+}
