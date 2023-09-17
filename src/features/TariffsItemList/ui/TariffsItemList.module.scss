@@ -1,0 +1,5 @@
+.TariffsItemList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* Два столбца равной ширины */
+	gap: 20px; /* Расстояние между элементами сетки */
+}

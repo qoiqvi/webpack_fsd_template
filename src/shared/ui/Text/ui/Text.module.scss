@@ -1,28 +1,18 @@
 .title {
-	color: var(--primary-color);
+	color: black;
 }
 
 .text {
-	color: var(--secondary-color);
+	color: rgb(56, 48, 48);
 }
 
 .error {
 	.title {
-		color: var(--red-light);
+		color: red;
 	}
 
 	.text {
-		color: var(--red-dark);
-	}
-}
-
-.inverted {
-	.title {
-		color: var(--inverted-primary-color);
-	}
-
-	.text {
-		color: var(--inverted-secondary-color);
+		color: red;
 	}
 }
 
@@ -78,10 +68,16 @@
 	.text {
 		color: white;
 	}
+	.title {
+		color: white;
+	}
 }
 
 .red {
 	.text {
+		color: red;
+	}
+	.title {
 		color: red;
 	}
 }

@@ -1,12 +1,12 @@
 import { classNames } from "shared/lib/classNames/classNames"
 import cls from "./TariffsPage.module.scss"
-import { memo, useEffect } from "react"
-import { Navbar } from "widgets/ui/Navbar"
+import { useEffect, useState } from "react"
 import { Page } from "widgets/Page"
-import axios from "axios"
-import { Api } from "shared/api/api"
-import { Select } from "shared/ui/Select/ui/Select"
 import { TariffPageHeader } from "./TariffPageHeader/TariffPageHeader"
+import { fetchTariffsByType } from "features/TariffsTabs"
+import { useSearchParams } from "react-router-dom"
+import { TariffSchema, TariffType } from "shared/types"
+import { TariffsItemList } from "features/TariffsItemList"
 
 export interface TariffsPageProps {
 	className?: string
@@ -14,16 +14,21 @@ export interface TariffsPageProps {
 
 export const TariffsPage = (props: TariffsPageProps) => {
 	const { className } = props
+	const [searchParams, setSearchParams] = useSearchParams()
+	const [tariffs, setTariffs] = useState<TariffSchema[]>([])
+
 	useEffect(() => {
-		async function getTariffs() {
-			const a = await Api.get("tariffs?type=Mobile")
-			console.log(a.data)
-		}
-		getTariffs()
-	}, [])
+		// eslint-disable-next-line no-extra-semi
+		;(async () => {
+			const response = await fetchTariffsByType((searchParams.get("type") as TariffType) || undefined)
+			setTariffs(response.data)
+		})()
+	}, [searchParams])
+
 	return (
 		<Page className={classNames(cls.TariffsPage, {}, [className])}>
-			<TariffPageHeader />
+			<TariffPageHeader setSearchParams={setSearchParams} />
+			<TariffsItemList tariffs={tariffs} />
 		</Page>
 	)
 }

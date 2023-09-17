@@ -1,18 +1,18 @@
 :root {
 	// typography
 
-	--font-family-main: ubuntu, "Times New Roman";
+	--font-family: "Montserrat", sans-serif;
 	--font-family-title: "Bebas Neue", sans-serif;
 	--font-family-compact: "MTS Compact", ubuntu;
-	--font-size-m: 20px;
-	--font-line-m: 28px;
-	--font-size-l: 22px;
-	--font-line-l: 30px;
-	--font-size-xl: 26px;
-	--font-line-xl: 34px;
-	--font-main: var(--font-size-m) / var(--font-line-m) var(--font-family-compact);
-	--font-large: var(--font-size-l) / var(--font-line-l) var(--font-family-text);
-	--font-xlarge: var(--font-size-xl) / var(--font-line-xl) var(--font-family-wide);
+	--font-size-m: 12px;
+	--font-line-m: 20px;
+	--font-size-l: 20px;
+	--font-line-l: 24px;
+	--font-size-xl: 34px;
+	--font-line-xl: 42px;
+	--font-main: var(--font-size-m) / var(--font-line-m) var(--font-family);
+	--font-large: var(--font-size-l) / var(--font-line-l) var(--font-family);
+	--font-xlarge: var(--font-size-xl) / var(--font-line-xl) var(--font-family);
 	font: var(--font-xl);
 
 	// размеры

@@ -12,23 +12,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export type ButtonSize = "size_m" | "size_l" | "size_xl"
 
-export type ButtonTheme =
-	| "clear"
-	| "outlined"
-	| "outlined_red"
-	| "background"
-	| "background_inverted"
+export type ButtonTheme = "clear" | "outlined" | "outlined_red" | "background" | "background_inverted" | "red"
 
 export const Button = memo((props: ButtonProps) => {
-	const {
-		className,
-		square,
-		size = "size_m",
-		children,
-		theme = "outlined",
-		disabled,
-		...otherProps
-	} = props
+	const { className, square, size = "size_m", children, theme = "outlined", disabled, ...otherProps } = props
 
 	const mods: Mods = {
 		[cls.square]: square,
@@ -39,11 +26,7 @@ export const Button = memo((props: ButtonProps) => {
 		<button
 			{...otherProps}
 			disabled={disabled}
-			className={classNames(cls.Button, mods, [
-				className,
-				cls[size],
-				cls[theme],
-			])}
+			className={classNames(cls.Button, mods, [className, cls[size], cls[theme]])}
 		>
 			{children}
 		</button>

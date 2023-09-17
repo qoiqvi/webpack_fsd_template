@@ -1,5 +1,18 @@
 export type TariffType = "Mobile" | "Convergent" | "HomeServicesTariff"
 
+interface subscriptionFee {
+	baseParameter: string
+	displayUnit: string
+	isUnlimited: boolean
+	numValue: number
+	numValueType: string
+	quotaPeriod: string
+	quotaUnit: string
+	sortOrder: number
+	title: string
+	value: string
+}
+
 export interface Unit {
 	display: string
 	periodDisplay: string
@@ -20,10 +33,40 @@ export interface Offer {
 	totalPrice: TotalPrice
 }
 
-// нужно сделать родительский тип с айдишником и типом, и расширить его под нужды
+interface Label {
+	sortOrder: number
+	text: string
+	type: string
+}
+
+interface productCharacteristics {
+	baseParameter: string
+	displayUnit: string
+	isUnlimited: boolean
+	numValue: number
+	numValueType: string
+	quotaUnit: string
+	title: string
+	value: string
+	description?: string
+}
+
+interface benefitsDescription {
+	description: string
+	icons: string[]
+}
 
 export interface TariffSchema {
+	benefitsDescription: benefitsDescription | null
+	cardImageUrl: string
+	description: string | null
+	id: number
+	label?: Label[] | null
 	marketingId: number
-	tariffType: TariffType
-	offer: Offer
+	parametrizedTariffSettings: any
+	productCharacteristics?: productCharacteristics[] | []
+	productFeatures: any[]
+	subscriptionFee?: subscriptionFee | null
+	title: string
+	type: TariffType
 }

@@ -1,0 +1,65 @@
+.TariffCard {
+	height: 300px;
+	width: 400px;
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+	border: 1px solid red;
+	border-radius: 12px;
+	* {
+		margin-left: 5px;
+	}
+	position: relative;
+}
+
+.title {
+	margin: 0;
+	padding: 0;
+}
+
+.label {
+	background: rgb(96, 96, 206);
+	width: auto;
+	border-radius: 30px;
+	margin: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.iconCont {
+	// position: relative;
+}
+
+.benefitionIcon {
+	position: absolute;
+	// top: 0;
+	// left: 0;
+	// justify-content: center;
+	// align-items: center;
+	// font-weight: bold;
+
+	// &:not(:first-child) {
+	// 	left: calc(5px + 100%);
+	// }
+}
+.productCharacteristics {
+}
+
+.benefits {
+	display: flex;
+	gap: 5px;
+	margin-top: 10px;
+}
+
+.btnCont {
+	width: 100%;
+	display: flex;
+	gap: 5px;
+	position: absolute;
+	bottom: 10px;
+}
+
+.btn {
+	width: 46%;
+}

@@ -1,14 +1,21 @@
 import { TariffsPage } from "pages/TariffsPage"
-import { classNames } from "shared/lib/classNames/classNames"
+import { Routes, Route } from "react-router"
 import { Sidebar } from "widgets/Sidebar"
 import { Navbar } from "widgets/ui/Navbar"
 
 export const App = () => {
 	return (
-		<div className={classNames("App", {}, [])}>
+		<div>
 			<Navbar />
 			<Sidebar />
-			<TariffsPage />
+			<div>
+				<Routes>
+					<Route
+						path="/"
+						element={<TariffsPage />}
+					></Route>
+				</Routes>
+			</div>
 		</div>
 	)
 }

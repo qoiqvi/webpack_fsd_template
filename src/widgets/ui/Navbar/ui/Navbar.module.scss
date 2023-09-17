@@ -1,4 +1,15 @@
 .Navbar {
 	height: var(--navbar-height);
 	background-color: var(--brand-mts-red);
+	display: flex;
+	align-items: center;
+	// justify-content: center;
+}
+
+.text {
+	margin-left: 40px;
+}
+
+.tabs {
+	margin-left: auto;
 }

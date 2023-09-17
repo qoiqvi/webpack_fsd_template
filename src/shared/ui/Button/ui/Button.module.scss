@@ -25,8 +25,7 @@
 
 .outlined_red {
 	padding: 10px 15px;
-	border: 2px solid var(--red-light);
-	color: var(--primary-color);
+	border: 2px solid var(--brand-mts-red);
 	background: none;
 }
 
@@ -78,4 +77,8 @@
 
 .disabled {
 	opacity: 0.5;
+}
+
+.red {
+	background-color: var(--brand-mts-red);
 }
