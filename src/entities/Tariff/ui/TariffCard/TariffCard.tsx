@@ -12,66 +12,88 @@ export interface TariffCardProps {
 
 export const TariffCard = memo((props: TariffCardProps) => {
 	const { className, tariff } = props
+
+	const price =
+		tariff?.subscriptionFee?.value ?? `${tariff?.subscriptionFee?.numValue} ${tariff?.subscriptionFee?.displayUnit}`
+
 	return (
 		<div className={classNames(cls.TariffCard, {}, [className])}>
-			<div className={cls.label}>
-				<Text
-					color="white"
-					text={tariff?.label?.[0].text}
-					className={cls.title}
-				/>
-			</div>
-			<Text
-				title={tariff?.title}
-				color="red"
-			/>
-			<ul className={cls.productCharacteristics}>
-				{tariff?.productCharacteristics?.map((characteristic, i) => (
-					<li key={i}>
+			<div
+				style={{ backgroundImage: `url(https://${tariff?.cardImageUrl})` }}
+				className={cls.image}
+			>
+				{tariff?.label ? (
+					<div className={cls.labelCard}>
 						<Text
-							size="size_l"
-							text={characteristic.title}
+							color="white"
+							text={tariff?.label?.[0].text}
+							className={cls.label}
 						/>
-					</li>
-				))}
-			</ul>
-			<div className={cls.benefits}>
-				<div className={cls.iconCont}>
-					{tariff?.benefitsDescription?.icons.map((icon) => (
-						<img
-							height={28}
-							width={28}
-							className={cls.benefitionIcon}
-							key={icon}
-							src={`https://${icon}`}
-						/>
+					</div>
+				) : null}
+			</div>
+			<div className={cls.content}>
+				<span className={cls.title}>{tariff?.title}</span>
+				<span
+					className={cls.desc}
+					dangerouslySetInnerHTML={{ __html: tariff?.description ?? "" }}
+				></span>
+				<ul className={cls.productCharacteristics}>
+					{tariff?.productCharacteristics?.map((characteristic, i) => (
+						<li
+							key={i}
+							className={cls.charateristic}
+						>
+							{`${characteristic.numValue} ${characteristic.displayUnit}`}
+						</li>
 					))}
+				</ul>
+				{tariff?.benefitsDescription ? (
+					<div className={cls.benefits}>
+						<div style={{ width: tariff?.benefitsDescription?.icons.length * 27 }}>
+							{tariff?.benefitsDescription?.icons.map((icon, i) => (
+								<img
+									height={28}
+									width={28}
+									style={{
+										left: i === 0 ? 0 : i * 20,
+									}}
+									className={cls.benefitionIcon}
+									key={icon}
+									src={`https://${icon}`}
+								/>
+							))}
+						</div>
+						<span
+							className={cls.description}
+							dangerouslySetInnerHTML={{ __html: tariff.benefitsDescription.description }}
+						/>
+					</div>
+				) : null}
+				<div className={cls.price}>
+					<Text title={price === "undefined undefined" ? "" : price} />
 				</div>
-				<Text text={tariff?.benefitsDescription?.description} />
-			</div>
-			<div className={cls.price}>
-				<Text title={tariff?.subscriptionFee?.value} />
-			</div>
-			<div className={cls.btnCont}>
-				<Button
-					theme="red"
-					className={cls.btn}
-				>
-					<Text
-						text={"Подключить"}
-						color="white"
-						align="center"
-					/>
-				</Button>
-				<Button
-					className={cls.btn}
-					theme="outlined_red"
-				>
-					<Text
-						text={"Подробнее"}
-						align="center"
-					/>
-				</Button>
+				<div className={cls.btnCont}>
+					<Button
+						theme="red"
+						className={cls.btn}
+					>
+						<Text
+							text={"Подключить"}
+							color="white"
+							align="center"
+						/>
+					</Button>
+					<Button
+						className={cls.btn}
+						theme="outlined_red"
+					>
+						<Text
+							text={"Подробнее"}
+							align="center"
+						/>
+					</Button>
+				</div>
 			</div>
 		</div>
 	)
