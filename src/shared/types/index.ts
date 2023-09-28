@@ -1,4 +1,4 @@
-export type TariffType = "Mobile" | "Convergent" | "HomeServicesTariff"
+export type TariffType = "Mobile" | "Convergent" | "HomeServicesTariff" | "All"
 
 interface subscriptionFee {
 	baseParameter: string

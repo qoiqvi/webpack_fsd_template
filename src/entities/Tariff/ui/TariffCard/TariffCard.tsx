@@ -44,7 +44,9 @@ export const TariffCard = memo((props: TariffCardProps) => {
 							key={i}
 							className={cls.charateristic}
 						>
-							{`${characteristic.numValue} ${characteristic.displayUnit}`}
+							{`${characteristic.numValue} ${
+								characteristic.displayUnit ? characteristic.displayUnit : "каналов"
+							}`}
 						</li>
 					))}
 				</ul>
